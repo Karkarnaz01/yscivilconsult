@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Y&amp;S Civil Engineering Consultation Limited - Portfolio: Civil Engineering Consultation for New Office Complex, Amana Estate, Kano">
+    <title>Y&amp;S Civil Engineering Consultation Limited | Portfolio - Civil Engineering Consultation for New Office Complex, Amana Estate, Kano</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        :root {
+            --primary: #0f172a;
+        }
+        
+        * {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+        
+        .tail-container * {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
+        }
+        
+        .section-header {
+            position: relative;
+        }
+        
+        .section-header:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: #0ea5e9;
+            bottom: -6px;
+            left: 0;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #0ea5e9;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .portfolio-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .portfolio-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        /* TIMELINE STYLES */
+        .phase-item {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .phase-item:hover {
+            transform: translateY(-3px);
+        }
+        
+        .phase-item.active {
+            border-color: #0ea5e9 !important;
+            background-color: #f0f9ff;
+            box-shadow: 0 10px 15px -3px rgb(14 165 233 / 0.2);
+        }
+        
+        .timeline-line {
+            animation: lineFill 2s ease-in-out forwards;
+        }
+        
+        @keyframes lineFill {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+    </style>
+</head>
+<body class="tail-container">
+    <!-- NAVBAR / HEADER -->
+    <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3">
+                    <div class="w-10 h-10 bg-[#0f172a] rounded-2xl flex items-center justify-center text-white text-2xl font-bold">Y&amp;S</div>
+                    <div>
+                        <h1 class="heading-font text-2xl font-semibold tracking-tight text-[#0f172a]">Y&amp;S</h1>
+                        <p class="text-[10px] text-slate-500 -mt-1 font-medium">CIVIL ENGINEERING CONSULTATION LTD</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="#home" onclick="document.getElementById('home').scrollIntoView({behavior:'smooth'})" class="nav-link text-slate-700 hover:text-[#0f172a]">Home</a>
+                    <a href="#about" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})" class="nav-link text-slate-700 hover:text-[#0f172a]">About Us</a>
+                    <a href="#services" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})" class="nav-link text-slate-700 hover:text-[#0f172a]">Services</a>
+                    <a href="#portfolio" onclick="document.getElementById('portfolio').scrollIntoView({behavior:'smooth'})" class="nav-link text-slate-700 hover:text-[#0f172a]">Portfolio</a>
+                    <a href="#timeline" onclick="document.getElementById('timeline').scrollIntoView({behavior:'smooth'})" class="nav-link text-slate-700 hover:text-[#0f172a]">Timeline</a>
+                    <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" class="nav-link text-slate-700 hover:text-[#0f172a]">Contact</a>
+                </div>
+
+                <div class="flex items-center gap-x-4">
+                    <a href="#contact" 
+                       onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
+                       class="px-6 py-2.5 bg-[#0f172a] hover:bg-sky-600 text-white text-sm font-semibold rounded-3xl flex items-center gap-x-2">
+                        <i class="fa-solid fa-arrow-right"></i>
+                        GET CONSULTATION
+                    </a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button onclick="toggleMobileMenu()" class="md:hidden text-2xl text-slate-700">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t px-6 py-4">
+            <div class="flex flex-col gap-y-4 text-sm font-medium">
+                <a href="#home" onclick="toggleMobileMenu()" class="py-2 border-b">Home</a>
+                <a href="#about" onclick="toggleMobileMenu()" class="py-2 border-b">About Us</a>
+                <a href="#services" onclick="toggleMobileMenu()" class="py-2 border-b">Services</a>
+                <a href="#portfolio" onclick="toggleMobileMenu()" class="py-2 border-b">Portfolio</a>
+                <a href="#timeline" onclick="toggleMobileMenu()" class="py-2 border-b">Timeline</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-bg text-white py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-8 items-center">
+                <div class="md:col-span-7">
+                    <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md text-white text-sm font-medium px-5 py-2 rounded-3xl mb-6">
+                        <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                        COMPLETED PROJECT • 2025
+                    </div>
+                    <h1 class="heading-font text-5xl md:text-6xl leading-none font-semibold tracking-tighter max-w-2xl">
+                        CIVIL ENGINEERING CONSULTATION FOR<br>NEW OFFICE COMPLEX<br>AMANA ESTATE, KANO
+                    </h1>
+                    <p class="mt-6 text-xl text-white/80 max-w-md">Providing expert structural design, site supervision, and sustainable infrastructure solutions for the World Health Organization's new regional hub in Northern Nigeria.</p>
+                    
+                    <div class="flex flex-wrap gap-4 mt-10">
+                        <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" 
+                           class="px-8 py-4 bg-white text-[#0f172a] hover:bg-amber-300 font-semibold rounded-3xl flex items-center gap-x-3 text-lg">
+                            REQUEST SIMILAR CONSULTATION
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#timeline" 
+                           class="px-8 py-4 border-2 border-white/70 hover:border-white font-medium rounded-3xl flex items-center gap-x-3">
+                            EXPLORE INTERACTIVE TIMELINE
+                        </a>
+                    </div>
+
+                    <!-- Project Meta -->
+                    <div class="mt-16 flex flex-wrap gap-x-12 gap-y-6">
+                        <div>
+                            <p class="text-white/60 text-sm">PROJECT STATUS</p>
+                            <p class="text-3xl font-semibold">Completed</p>
+                        </div>
+                        <div>
+                            <p class="text-white/60 text-sm">PROJECT TYPE</p>
+                            <p class="text-3xl font-semibold">Civil Engineering Consultation</p>
+                        </div>
+                        <div>
+                            <p class="text-white/60 text-sm">LOCATION</p>
+                            <p class="text-3xl font-semibold">Amana Estate, Kano</p>
+                        </div>
+                        <div>
+                            <p class="text-white/60 text-sm">YEAR</p>
+                            <p class="text-3xl font-semibold">2025</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-5 hidden md:block">
+                    <div class="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20">
+                        <div class="flex justify-between items-center mb-6">
+                            <div class="flex -space-x-4">
+                                <div class="w-9 h-9 bg-white rounded-2xl flex items-center justify-center text-[#0f172a] font-bold">Y</div>
+                                <div class="w-9 h-9 bg-sky-400 rounded-2xl flex items-center justify-center text-white font-bold">S</div>
+                            </div>
+                            <p class="text-xs uppercase tracking-widest font-medium">Y&amp;S Civil Engineering Consultation Ltd</p>
+                        </div>
+                        <p class="text-white/90 italic">"Our team delivered precise structural analysis, drainage optimization, and full construction supervision ensuring the facility meets international WHO standards and local resilience requirements."</p>
+                        <div class="mt-6 text-xs text-white/60 flex items-center gap-2">
+                            <i class="fa-solid fa-medal"></i>
+                            CERTIFIED BY COREN • NIGERIAN SOCIETY OF ENGINEERS
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT DESCRIPTION -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-16">
+                <div class="md:col-span-7">
+                    <h2 class="section-header text-4xl font-semibold heading-font tracking-tight mb-8">Project Overview</h2>
+                    <p class="text-lg leading-relaxed text-slate-700">
+                        This project involved comprehensive civil engineering consultation, detailed structural design review, geotechnical assessment, and full-time construction supervision for the new WHO Kano State Office complex. 
+                        Y&amp;S Civil Engineering Consultation Limited was engaged to ensure the facility is resilient, sustainable, and fully compliant with international health facility standards while adapting to local environmental conditions in Northern Nigeria.
+                    </p>
+                    
+                    <div class="mt-12">
+                        <h3 class="font-semibold text-xl mb-6 flex items-center gap-x-3"><i class="fa-solid fa-list-check text-sky-500"></i> Key Deliverables</h3>
+                        <ul class="space-y-6">
+                            <li class="flex gap-x-4">
+                                <div class="w-8 h-8 bg-sky-100 text-sky-600 rounded-2xl flex items-center justify-center flex-shrink-0">1</div>
+                                <div>
+                                    <p class="font-medium">Structural Design &amp; Analysis</p>
+                                    <p class="text-slate-600">Detailed design of reinforced concrete frame, foundation systems optimized for Kano’s soil conditions, and seismic considerations.</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-x-4">
+                                <div class="w-8 h-8 bg-sky-100 text-sky-600 rounded-2xl flex items-center justify-center flex-shrink-0">2</div>
+                                <div>
+                                    <p class="font-medium">Site Drainage &amp; Infrastructure</p>
+                                    <p class="text-slate-600">Comprehensive underground drainage system, stormwater management, and access roads to prevent flooding in the Sahel region.</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-x-4">
+                                <div class="w-8 h-8 bg-sky-100 text-sky-600 rounded-2xl flex items-center justify-center flex-shrink-0">3</div>
+                                <div>
+                                    <p class="font-medium">Supervision &amp; Quality Assurance</p>
+                                    <p class="text-slate-600">Continuous on-site supervision, material testing, and compliance certification throughout the 18-month construction phase.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Sidebar Stats -->
+                <div class="md:col-span-5 bg-slate-50 rounded-3xl p-8 h-fit">
+                    <h3 class="text-2xl font-semibold mb-8">Project Highlights</h3>
+                    <div class="space-y-8">
+                        <div class="flex justify-between border-b pb-6">
+                            <div>
+                                <p class="text-slate-500 text-sm">CLIENT</p>
+                                <p class="font-semibold">World Health Organization (WHO)</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-slate-500 text-sm">CONTRACT VALUE</p>
+                                <p class="font-semibold">₦1.2 Billion</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-between border-b pb-6">
+                            <div>
+                                <p class="text-slate-500 text-sm">SITE AREA</p>
+                                <p class="font-semibold">4,200 m²</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-slate-500 text-sm">BUILDING FOOTPRINT</p>
+                                <p class="font-semibold">1,850 m²</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-between border-b pb-6">
+                            <div>
+                                <p class="text-slate-500 text-sm">DURATION</p>
+                                <p class="font-semibold">18 Months</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-slate-500 text-sm">TEAM SIZE</p>
+                                <p class="font-semibold">14 Engineers &amp; Supervisors</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-slate-500 text-sm mb-3">SUSTAINABILITY FEATURES</p>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="px-5 py-1 bg-white text-xs font-medium rounded-3xl shadow-sm">Solar-Ready Roof</span>
+                                <span class="px-5 py-1 bg-white text-xs font-medium rounded-3xl shadow-sm">Rainwater Harvesting</span>
+                                <span class="px-5 py-1 bg-white text-xs font-medium rounded-3xl shadow-sm">Energy-Efficient HVAC</span>
+                                <span class="px-5 py-1 bg-white text-xs font-medium rounded-3xl shadow-sm">Green Landscaping</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE PROJECT TIMELINE -->
+    <section id="timeline" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
+                <div>
+                    <h2 class="section-header text-4xl font-semibold heading-font tracking-tight">Interactive Project Timeline</h2>
+                    <p class="text-slate-600 mt-3 max-w-md">18-month journey from concept to successful handover. Click any phase to explore details, milestones, and outcomes.</p>
+                </div>
+                <div class="mt-6 md:mt-0 inline-flex items-center gap-x-3 bg-white px-6 py-3 rounded-3xl shadow-sm text-emerald-700 font-medium">
+                    <div class="flex items-center">
+                        <div class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+                    </div>
+                    FULLY COMPLETED • JUNE 2025
+                    <span class="text-xs px-3 py-1 bg-emerald-100 text-emerald-700 rounded-3xl font-semibold">18 MONTHS ON SCHEDULE</span>
+                </div>
+            </div>
+
+            <!-- Timeline Container -->
+            <div class="relative mb-16">
+                <div class="timeline-line absolute top-[42px] left-10 right-10 h-1 bg-gradient-to-r from-slate-200 via-sky-300 to-emerald-400 rounded-full hidden md:block"></div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 relative z-10">
+                    <!-- Phase 1 -->
+                    <div onclick="selectPhase(0)" class="phase-item active flex flex-col items-center text-center bg-white border-2 border-sky-500 rounded-3xl py-8 px-4 cursor-pointer">
+                        <div class="w-16 h-16 flex items-center justify-center text-4xl bg-sky-50 text-sky-600 rounded-2xl mb-5">
+                            <i class="fa-solid fa-compass-drafting"></i>
+                        </div>
+                        <div class="text-2xl font-bold text-slate-300">01</div>
+                        <p class="font-semibold mt-3">Planning &amp; Geotechnical</p>
+                        <p class="text-xs text-slate-400 mt-1">Jan – Mar 2024</p>
+                        <p class="text-[10px] text-emerald-600 font-medium mt-4 flex items-center gap-x-1"><i class="fa-solid fa-check-circle"></i> COMPLETED</p>
+                    </div>
+
+                    <!-- Phase 2 -->
+                    <div onclick="selectPhase(1)" class="phase-item flex flex-col items-center text-center bg-white border-2 border-transparent rounded-3xl py-8 px-4 cursor-pointer">
+                        <div class="w-16 h-16 flex items-center justify-center text-4xl bg-slate-100 text-slate-500 rounded-2xl mb-5">
+                            <i class="fa-solid fa-hard-hat"></i>
+                        </div>
+                        <div class="text-2xl font-bold text-slate-300">02</div>
+                        <p class="font-semibold mt-3">Site Preparation &amp; Foundation</p>
+                        <p class="text-xs text-slate-400 mt-1">Apr – Jun 2024</p>
+                        <p class="text-[10px] text-emerald-600 font-medium mt-4 flex items-center gap-x-1"><i class="fa-solid fa-check-circle"></i> COMPLETED</p>
+                    </div>
+
+                    <!-- Phase 3 -->
+                    <div onclick="selectPhase(2)" class="phase-item flex flex-col items-center text-center bg-white border-2 border-transparent rounded-3xl py-8 px-4 cursor-pointer">
+                        <div class="w-16 h-16 flex items-center justify-center text-4xl bg-slate-100 text-slate-500 rounded-2xl mb-5">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
+                        <div class="text-2xl font-bold text-slate-300">03</div>
+                        <p class="font-semibold mt-3">Superstructure Construction</p>
+                        <p class="text-xs text-slate-400 mt-1">Jul – Sep 2024</p>
+                        <p class="text-[10px] text-emerald-600 font-medium mt-4 flex items-center gap-x-1"><i class="fa-solid fa-check-circle"></i> COMPLETED</p>
+                    </div>
+
+                    <!-- Phase 4 -->
+                    <div onclick="selectPhase(3)" class="phase-item flex flex-col items-center text-center bg-white border-2 border-transparent rounded-3xl py-8 px-4 cursor-pointer">
+                        <div class="w-16 h-16 flex items-center justify-center text-4xl bg-slate-100 text-slate-500 rounded-2xl mb-5">
+                            <i class="fa-solid fa-house-chimney"></i>
+                        </div>
+                        <div class="text-2xl font-bold text-slate-300">04</div>
+                        <p class="font-semibold mt-3">Roofing &amp; Building Envelope</p>
+                        <p class="text-xs text-slate-400 mt-1">Oct – Dec 2024</p>
+                        <p class="text-[10px] text-emerald-600 font-medium mt-4 flex items-center gap-x-1"><i class="fa-solid fa-check-circle"></i> COMPLETED</p>
+                    </div>
+
+                    <!-- Phase 5 -->
+                    <div onclick="selectPhase(4)" class="phase-item flex flex-col items-center text-center bg-white border-2 border-transparent rounded-3xl py-8 px-4 cursor-pointer">
+                        <div class="w-16 h-16 flex items-center justify-center text-4xl bg-slate-100 text-slate-500 rounded-2xl mb-5">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                        <div class="text-2xl font-bold text-slate-300">05</div>
+                        <p class="font-semibold mt-3">MEP &amp; Interior Finishes</p>
+                        <p class="text-xs text-slate-400 mt-1">Jan – Mar 2025</p>
+                        <p class="text-[10px] text-emerald-600 font-medium mt-4 flex items-center gap-x-1"><i class="fa-solid fa-check-circle"></i> COMPLETED</p>
+                    </div>
+
+                    <!-- Phase 6 -->
+                    <div onclick="selectPhase(5)" class="phase-item flex flex-col items-center text-center bg-white border-2 border-transparent rounded-3xl py-8 px-4 cursor-pointer">
+                        <div class="w-16 h-16 flex items-center justify-center text-4xl bg-slate-100 text-slate-500 rounded-2xl mb-5">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+                        <div class="text-2xl font-bold text-slate-300">06</div>
+                        <p class="font-semibold mt-3">Landscaping &amp; Handover</p>
+                        <p class="text-xs text-slate-400 mt-1">Apr – Jun 2025</p>
+                        <p class="text-[10px] text-emerald-600 font-medium mt-4 flex items-center gap-x-1"><i class="fa-solid fa-check-circle"></i> COMPLETED</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic Detail Panel -->
+            <div id="phase-detail" class="bg-white rounded-3xl shadow-xl p-8 md:p-10 grid md:grid-cols-12 gap-8 items-center border border-slate-100">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="section-header text-white text-4xl font-semibold heading-font">Project Gallery</h2>
+                    <p class="text-slate-400 mt-2">Key milestones and completed works</p>
+                </div>
+                <a href="#" class="text-sky-400 hover:text-white flex items-center gap-x-2 text-sm font-medium">
+                    VIEW ALL PHOTOS <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="group relative overflow-hidden rounded-3xl aspect-video">
+                    <img src="https://picsum.photos/id/1015/800/600" alt="Site foundation work" class="w-full h-full object-cover group-hover:scale-110">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                        <p class="text-sm font-medium">Foundation &amp; Piling Phase</p>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-3xl aspect-video">
+                    <img src="https://picsum.photos/id/1016/800/600" alt="Structural framing" class="w-full h-full object-cover group-hover:scale-110">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                        <p class="text-sm font-medium">Steel &amp; Concrete Framing</p>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-3xl aspect-video">
+                    <img src="https://picsum.photos/id/160/800/600" alt="Roof installation" class="w-full h-full object-cover group-hover:scale-110">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                        <p class="text-sm font-medium">Roofing &amp; Drainage System</p>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-3xl aspect-video">
+                    <img src="https://picsum.photos/id/201/800/600" alt="Completed exterior" class="w-full h-full object-cover group-hover:scale-110">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                        <p class="text-sm font-medium">Final Exterior &amp; Landscaping</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR APPROACH &amp; RESULTS -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="section-header text-3xl font-semibold mb-8">Our Approach</h2>
+                <p class="text-slate-600 leading-relaxed">
+                    Y&amp;S adopted a phased, data-driven methodology integrating advanced geotechnical analysis, BIM modeling, and real-time construction monitoring. 
+                    We worked closely with the main contractor and WHO technical team to optimize designs for cost, durability, and climate resilience.
+                </p>
+                <ul class="mt-10 space-y-8 text-sm">
+                    <li class="flex gap-4"><i class="fa-solid fa-check text-emerald-500 mt-1"></i> <span>3D BIM modeling for clash detection and coordination</span></li>
+                    <li class="flex gap-4"><i class="fa-solid fa-check text-emerald-500 mt-1"></i> <span>Regular stakeholder workshops and value engineering sessions</span></li>
+                    <li class="flex gap-4"><i class="fa-solid fa-check text-emerald-500 mt-1"></i> <span>Weekly progress reports with drone surveys and quality audits</span></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h2 class="section-header text-3xl font-semibold mb-8">Project Results</h2>
+                <div class="bg-emerald-50 border border-emerald-200 rounded-3xl p-8 text-slate-800">
+                    <p class="italic text-xl leading-tight">
+                        “A modern, secure, and fully functional office complex completed on time and within budget. Y&amp;S’s expertise in civil engineering consultation ensured the highest standards of safety, sustainability, and operational efficiency.”
+                    </p>
+                    <div class="mt-8 flex items-center gap-x-4">
+                        <div class="text-xs uppercase font-medium">WHO Kano Representative</div>
+                        <div class="h-px flex-1 bg-emerald-300"></div>
+                    </div>
+                </div>
+                
+                <div class="mt-10 grid grid-cols-3 gap-6 text-center">
+                    <div class="bg-white shadow-sm border rounded-3xl py-6">
+                        <div class="text-4xl font-semibold text-emerald-600">100%</div>
+                        <p class="text-xs tracking-widest mt-1">COMPLIANCE WITH WHO STANDARDS</p>
+                    </div>
+                    <div class="bg-white shadow-sm border rounded-3xl py-6">
+                        <div class="text-4xl font-semibold text-emerald-600">18</div>
+                        <p class="text-xs tracking-widest mt-1">MONTHS ON SCHEDULE</p>
+                    </div>
+                    <div class="bg-white shadow-sm border rounded-3xl py-6">
+                        <div class="text-4xl font-semibold text-emerald-600">4.2 ha</div>
+                        <p class="text-xs tracking-widest mt-1">FULLY LANDSCAPED SITE</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO GRID -->
+    <section id="portfolio" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-semibold heading-font text-center mb-4">More Projects by Y&amp;S</h2>
+            <p class="text-center text-slate-500 mb-12">Selected civil engineering consultation projects across Nigeria</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div onclick="window.location.hash = 'home'" class="portfolio-card bg-white rounded-3xl overflow-hidden cursor-pointer">
+                    <img src="https://picsum.photos/id/870/800/500" alt="Road project" class="w-full h-52 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between text-xs mb-3"><span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-3xl">Abuja • 2024</span><span class="text-slate-400">Road &amp; Bridge</span></div>
+                        <p class="font-semibold text-xl">Supervision of 15km Dual Carriageway, Federal Capital Territory</p>
+                    </div>
+                </div>
+                
+                <div onclick="alert('This would open a similar detail page for this project in a real website')" class="portfolio-card bg-white rounded-3xl overflow-hidden cursor-pointer">
+                    <img src="https://picsum.photos/id/1005/800/500" alt="Hospital project" class="w-full h-52 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between text-xs mb-3"><span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-3xl">Lagos • 2023</span><span class="text-slate-400">Healthcare</span></div>
+                        <p class="font-semibold text-xl">Structural Consultation for Lagos State University Teaching Hospital</p>
+                    </div>
+                </div>
+                
+                <div onclick="alert('This would open a similar detail page for this project in a real website')" class="portfolio-card bg-white rounded-3xl overflow-hidden cursor-pointer">
+                    <img src="https://picsum.photos/id/1018/800/500" alt="Housing project" class="w-full h-52 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between text-xs mb-3"><span class="bg-sky-100 text-sky-700 px-3 py-1 rounded-3xl">Kano • 2025</span><span class="text-slate-400">Housing</span></div>
+                        <p class="font-semibold text-xl">Master Planning &amp; Infrastructure Design for 500-unit Estate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPANY INFO + MAILING LIST -->
+    <section class="py-20 bg-white border-t">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-16">
+                <div class="md:col-span-7">
+                    <h2 class="text-3xl font-semibold mb-6">Y&amp;S Civil Engineering Consultation Limited</h2>
+                    <p class="text-slate-600 max-w-lg">
+                        We specialise in providing expert civil engineering consultation, structural design, project supervision, geotechnical studies, and sustainable infrastructure solutions across Nigeria. 
+                        From concept to completion — engineering excellence you can trust.
+                    </p>
+                    
+                    <a href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" 
+                       class="inline-flex mt-8 px-8 py-4 bg-[#0f172a] text-white font-semibold rounded-3xl items-center gap-x-3 hover:shadow-xl">
+                        FREE CONSULTATION CALL
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                </div>
+                
+                <div class="md:col-span-5 bg-slate-900 text-white rounded-3xl p-10 flex flex-col justify-center">
+                    <h3 class="text-2xl font-medium mb-3">Join Our Mailing List</h3>
+                    <p class="text-slate-300 mb-8">Stay updated with industry insights, project case studies, and engineering innovations from Y&amp;S.</p>
+                    <div class="flex">
+                        <input id="emailInput" type="email" placeholder="your@email.com" class="flex-1 bg-white/10 border border-white/30 focus:border-white rounded-l-3xl px-6 py-4 outline-none text-white placeholder:text-white/40">
+                        <button onclick="subscribe()" class="bg-white text-slate-900 font-semibold px-10 rounded-r-3xl hover:bg-amber-300">SUBSCRIBE</button>
+                    </div>
+                    <p class="text-xs text-white/40 mt-4">We respect your inbox. Unsubscribe anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT + FOOTER (NOW WITH NETLIFY FORMS) -->
+    <footer id="contact" class="bg-[#0f172a] text-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-y-12">
+                <div class="md:col-span-5">
+                    <div class="flex items-center gap-x-3 text-white mb-8">
+                        <div class="w-10 h-10 bg-white rounded-2xl flex items-center justify-center text-[#0f172a] text-3xl font-bold">Y&amp;S</div>
+                        <h1 class="heading-font text-3xl">Y&amp;S Civil Engineering Consultation Limited</h1>
+                    </div>
+                    <p class="max-w-xs text-slate-300">Suite 12, Platinum Plaza, Plot 1205, Cadastral Zone A3, Wuse II, Abuja, FCT, Nigeria</p>
+                    
+                    <div class="mt-8 space-y-4 text-sm">
+                        <a href="tel:+2348035551234" class="flex items-center gap-x-4 hover:text-sky-300">
+                            <i class="fa-solid fa-phone w-6"></i>
+                            <span>+234 803 555 1234</span>
+                        </a>
+                        <a href="mailto:info@yscivil.ng" class="flex items-center gap-x-4 hover:text-sky-300">
+                            <i class="fa-solid fa-envelope w-6"></i>
+                            <span>info@yscivil.ng</span>
+                        </a>
+                        <div class="flex items-center gap-x-4">
+                            <i class="fa-solid fa-clock w-6"></i>
+                            <span>Mon - Fri: 08:00am - 05:00pm</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-2">
+                    <h4 class="uppercase text-xs tracking-widest mb-4 text-slate-400">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-sky-400">Our Services</a></li>
+                        <li><a href="#" class="hover:text-sky-400">Our Team</a></li>
+                        <li><a href="#" class="hover:text-sky-400">Blog &amp; Insights</a></li>
+                        <li><a href="#" class="hover:text-sky-400">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="md:col-span-5">
+                    <h4 class="uppercase text-xs tracking-widest mb-4 text-slate-400">Get In Touch</h4>
+                    
+                    <!-- NETLIFY FORMS ENABLED -->
+                    <form name="contact" method="POST" data-netlify="true" class="space-y-6">
+                        <input type="hidden" name="form-name" value="contact">
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="text" name="name" placeholder="Full Name" required 
+                                   class="bg-white/10 border border-white/20 focus:border-white rounded-3xl px-6 py-5 text-white outline-none">
+                            <input type="tel" name="phone" placeholder="Phone Number" required 
+                                   class="bg-white/10 border border-white/20 focus:border-white rounded-3xl px-6 py-5 text-white outline-none">
+                        </div>
+                        <input type="email" name="email" placeholder="Email Address" required 
+                               class="w-full bg-white/10 border border-white/20 focus:border-white rounded-3xl px-6 py-5 text-white outline-none">
+                        <textarea name="message" rows="4" placeholder="Tell us about your project..." required 
+                                  class="w-full bg-white/10 border border-white/20 focus:border-white rounded-3xl px-6 py-5 text-white outline-none"></textarea>
+                        <button type="submit" 
+                                class="w-full bg-white text-[#0f172a] font-semibold py-5 rounded-3xl text-lg flex items-center justify-center gap-x-3 hover:shadow-2xl">
+                            SEND MESSAGE
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    
+                    <p class="text-xs text-white/60 mt-6 text-center">✅ Your message will be delivered instantly via Netlify Forms. We reply within 24 hours.</p>
+                </div>
+            </div>
+            
+            <div class="text-center text-xs text-slate-400 mt-16 border-t border-white/10 pt-8">
+                &copy; 2026 Y&amp;S Civil Engineering Consultation Limited • All Rights Reserved • COREN Registered • RC: 1234567
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu')
+            menu.classList.toggle('hidden')
+        }
+        
+        function subscribe() {
+            const input = doc
